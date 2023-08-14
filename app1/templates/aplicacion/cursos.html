@@ -1,0 +1,42 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+
+{% block encabezado %}
+    Cursos
+{% endblock encabezado %}
+    
+
+
+{% block contenido %}
+<h1> Bienvenidos a la pagina de cursos </h1>
+
+<table class="table table-success table-striped">
+    <thead>
+        <tr>
+            
+            <th>ID</th>
+
+            <th>Nombre de curso</th>
+
+            <th>comision</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+{% for c in cursos  %}
+        <tr>
+            <td>{{ c.id  }}</td>
+            <td>{{ c.nombre }}</td>
+            <td>{{ c.comision }}</td>
+        </tr>
+
+
+{% endfor %}
+    </tbody>
+</table>
+    
+
+{% endblock contenido %}
+    
